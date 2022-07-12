@@ -17,7 +17,26 @@ header {
 }
 
 body {
-    background: linear-gradient(90deg, rgba(45,45,43,1) 0%, rgba(178,2,2,1) 10%, rgba(178,2,2,1) 90%, rgba(45,45,43,1) 100%);
+    background: linear-gradient(90deg, rgba(45,43,43,1) 0%, rgba(178,2,2,1) 10%, rgba(178,2,2,1) 90%, rgba(45,43,43,1) 100%);
+}
+
+#about-body {
+    background: linear-gradient(90deg, rgba(45,43,43,1) 0%, rgba(178,2,2,1) 25%, rgba(178,2,2,1) 75%, rgba(45,43,43,1) 100%);
+}
+
+html {
+    animation: fadeInBodyAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInBodyAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 #contact-body {
@@ -61,7 +80,7 @@ footer p {
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 2px;
+    height: 7.5%;
     bottom: 0;
     left: 0;
     background-color: white;
@@ -93,6 +112,7 @@ footer p {
 }
 
 #self-portrait-container {
+    
     background-color: white;
     
     max-width: 80%;
@@ -317,4 +337,140 @@ footer p {
         opacity: 0;
         pointer-events: none;
     }
+}
+
+.about-container {
+    display: block;
+    position: relative;
+    
+    height: 80vh;
+    width: 50vw;
+    margin: auto;
+    margin-top: 10vh;
+    
+    background-color: #f3f2f2;
+}
+
+.about-container h2 {
+    display: block;
+    
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 2.5vw;
+    line-height: 2.5vw;
+    text-align: center;
+    
+    padding-top: 2%;
+}
+
+.about-container p {
+    display: block;
+    
+    color: #2d2b2b;
+    font-size: 1.25vw;
+    line-height: 1.25vw;
+    
+    padding-left: 4%;
+    padding-right: 4%;
+    
+    text-align: justify;
+    text-align-last: left;
+}
+
+.about-container #about-container-introduction-heading {
+    transition: all 0.25s linear;
+}
+
+.about-container #about-container-introduction-heading:hover {
+    transform: scale(1.125);
+}
+
+.about-container #about-container-qualifications-paragraph a {
+    text-decoration: none;
+    color: #b20202;
+    
+    background-image: linear-gradient(#b20202 0 0);
+    background-size: 200% 10%;
+    background-position: 200% 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.25s, background-position .25s .25s;
+}
+
+.about-container #about-container-qualifications-paragraph a:hover {
+    transition: color 0.75s, background-size .25s .25s, background-position .25s;
+    background-size: 200% 100%;
+    background-position: 100% 100%;
+    color: white;
+}
+
+.about-container #about-container-last-paragraph {
+    position: absolute;
+    bottom: 0;
+    text-align-last: center;
+}
+
+.about-container .image-besides-text-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 2%;
+    align-items: center;
+    
+    padding-left: 4%;
+}
+
+.about-container .image-besides-text-grid p {
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+.about-self-portrait {
+    display: block;
+    
+    width: 15vw;
+    height: auto;
+    
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.5vmin;
+    border-color: white;
+    
+    box-shadow: 2px 2px 4px #000000;
+    
+    opacity: 1;
+    
+    transition: 0.25s linear;
+}
+
+.hidden-audio-source {
+    display: none;
+    width: 97%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+<!--- Media Query for Mobile Phones --->
+@media screen and (max-width: 480px) {
+    
+}
+
+<!--- Media Query for IPads --->
+@media screen and (max-width: 768px) {
+    
+}
+
+<!--- Media Query for Smaller Screens --->
+@media screen and (max-width: 1024px) {
+    
+}
+
+<!--- Media Query for Normal Size Screens --->
+@media screen and (max-width: 1200px) {
+    
+}
+
+<!--- Media Query for Larger Screens --->
+@media screen and (min-width: 1201px) {
+    
 }

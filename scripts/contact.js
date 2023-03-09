@@ -2,12 +2,10 @@
 
 $(function() {
     // get relevant form elements
-    
     var form = document.getElementById('email-form');
     var status = document.getElementById('email-form-status');
     
     // functions for handling form submission
-    
     function success() {
         form.reset();
         
@@ -23,7 +21,6 @@ $(function() {
     }
     
     // handle form submission
-    
     form.addEventListener("submit", function(ev) {
         ev.preventDefault();
         var data = new FormData(form);
@@ -33,7 +30,6 @@ $(function() {
 });
 
 // helper function for sending an AJAX request
-
 function ajax(method, url, data, success, error) {
     var xhr = new XMLHttpRequest();
     xhr.open(method, url);

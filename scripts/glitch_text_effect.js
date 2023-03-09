@@ -7,17 +7,18 @@ document.querySelector("#glitch_text").onmouseover = event => {
     const interval = setInterval(() => {
         event.target.innerText = event.target.innerText.split("")
         .map((letter, index) => {
-            if(iteration < index) {
+            if(index < iteration) {
                 return event.target.dataset.value[index];
             }
-            return alphabet[Math.floor(Math.random() * alphabet.length)]);
-        }
+            return alphabet[Math.floor(Math.random() * alphabet.length)];
+        })
         .join("");
+        
+        if(iteration >= event.target.dataset.value.length) {
+            clearInterval(interval);
+        }
+    
+        iteration += 1;
+        
     }, interval_time_ms);
-    
-    if(iteration >= event.target.dataset.value.length) {
-        clearInterval(interval);
-    }
-    
-    iteration += 1 / 2;
 }

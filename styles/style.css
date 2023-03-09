@@ -20,6 +20,14 @@ body {
     background: linear-gradient(90deg, rgba(45,43,43,1) 0%, rgba(178,2,2,1) 10%, rgba(178,2,2,1) 90%, rgba(45,43,43,1) 100%);
 }
 
+iframe {
+    border-radius:12px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 #about-body {
     background: linear-gradient(90deg, rgba(45,43,43,1) 0%, rgba(178,2,2,1) 25%, rgba(178,2,2,1) 75%, rgba(45,43,43,1) 100%);
 }
